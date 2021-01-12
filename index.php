@@ -17,7 +17,7 @@ th, td {
 
 
 label {
-color: GREEN;
+color: Orange;
 font-weight: bold;
 display: block;
 width: 150px;
@@ -116,7 +116,7 @@ while ($row = $stmt->fetch())
     echo "<td>".$row['Nume']."</td>";
     echo "<td>".$row['Varsta']."</td>";
   
-    echo "<td>"."<form method='post'><input type='submit' name=$aux class='btn btn-danger' value='Stergere'"."</tr>";
+    echo "<td>"."<form method='post'><input type='submit' name=$aux class='btn btn-primary' value='Stergere'"."</tr>";
     
 
 }
@@ -140,6 +140,6 @@ while ($row = $stmt->fetch())
      
  <br><br>
         <input type="submit" name="inserare"
-        class="btn btn-success" value="inserare" /> 
+        class="btn btn-warning" value="inserare" /> 
     </form>
 </div>
