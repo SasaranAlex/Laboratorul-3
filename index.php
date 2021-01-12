@@ -67,7 +67,7 @@ if($exista==0)
 {
    $statement="INSERT INTO Pisica (id_pisica,Nume,Varsta) values (?,?,?)";
    $stmt = $DHB->prepare($statement);
-$stmt->execute([$_POST['id_pisica'],$_POST['Nume'],$_POST['Varsta']);   
+$stmt->execute([$_POST['id_pisica'],$_POST['Nume'],$_POST['Varsta']]);   
 
 
 }
@@ -80,11 +80,11 @@ else
     $sql = "UPDATE Pisica SET  Nume = :Nume, Varsta=:Varsta,  WHERE id_pisica= :id_pisica";
 $query = $DHB->prepare($sql);
 $result = $query->execute(array(':Nume' => $_POST['Nume'],
- ':Varsta' => $_POST['Varsta'], 
- 
- }
+ ':Varsta' => $_POST['Varsta'])); 
  
 }
+  
+ }
 
 for($i=0;$i<9999;$i++)
 if(isset($_POST[$i]))
